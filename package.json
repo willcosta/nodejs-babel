@@ -1,0 +1,21 @@
+{
+  "name": "nodejs-babel-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@gitlab.com:willian87/nodejs-babel-boilerplate.git",
+  "author": "Will Costa <willian87@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.18.4"
+  },
+  "scripts": {
+    "build": "rm -rf ./build && babel -d ./build ./src",
+    "start": "node ./build/index.js",
+    "dev": "nodemon --exec babel-node ./src/index.js",
+    "debug": "nodemon --exec babel-node ./src/index.js --inspect"
+  }
+}
